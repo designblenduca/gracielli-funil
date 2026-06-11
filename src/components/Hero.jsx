@@ -1,4 +1,4 @@
-import React from 'react';
+const assetBase = import.meta.env.BASE_URL;
 
 function Hero({ onStart }) {
   return (
@@ -26,8 +26,8 @@ function Hero({ onStart }) {
 
       <div className="hero-image">
         <picture>
-          <source media="(max-width: 768px)" srcSet="/hero-mobile.png" />
-          <img src="/hero-desktop.png" alt="Gracielli Camini" />
+          <source media="(max-width: 768px)" srcSet={`${assetBase}hero-mobile.png`} />
+          <img src={`${assetBase}hero-desktop.png`} alt="Gracielli Camini" />
         </picture>
       </div>
     </section>

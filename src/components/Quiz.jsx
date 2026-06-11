@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // Placeholder questions mapping to: A: Diretiva, B: Acolhedora, C: Evitativa, D: Centralizadora
 const quizData = [

@@ -1,5 +1,3 @@
-import React from 'react';
-
 // SVG icons for each point
 const icons = {
   profile: (

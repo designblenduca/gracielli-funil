@@ -1,5 +1,3 @@
-import React from 'react';
-
 function AuthoritySection({ onStart }) {
   return (
     <section className="section authority-section">
