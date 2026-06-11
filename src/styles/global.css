@@ -249,12 +249,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .hero-overlay {
-    background: linear-gradient(
-      180deg,
-      rgba(45, 42, 41, 0.2) 0%,
-      rgba(45, 42, 41, 0.8) 45%,
-      rgba(45, 42, 41, 0.95) 100%
-    );
+    background: none;
     z-index: 2;
   }
 
