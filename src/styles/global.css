@@ -3,6 +3,7 @@
 :root {
   /* Cores - Design System */
   --color-dark: #363332;
+  --color-dark-deep: #221F1F;
   --color-primary: #6B625F;
   --color-off-white: #FAF8F7;
   --color-white: #FFFFFF;
@@ -170,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   min-height: 100vh;
   overflow: hidden;
-  background: transparent;
+  background: var(--color-dark-deep);
 }
 
 .hero-overlay {
@@ -279,14 +280,14 @@ h1, h2, h3, h4, h5, h6 {
    SEÇÃO DE AUTORIDADE (Warm Gray / Soft Off-White Alternada)
    --------------------------------- */
 .authority-section {
-  background-color: var(--color-off-white);
-  color: var(--color-primary);
+  background-color: var(--color-dark);
+  color: var(--color-text-light);
   text-align: center;
 }
 
 .authority-section h2 {
   font-size: clamp(2rem, 4vw, 3rem); /* Tipografia DS */
-  color: var(--color-dark);
+  color: var(--color-white);
   margin-bottom: var(--space-8);
   font-weight: 600;
   max-width: 800px;
@@ -296,7 +297,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .authority-section p {
   font-size: 1.15rem;
-  color: var(--color-primary);
+  color: var(--color-text-muted);
   max-width: 700px;
   margin: 0 auto var(--space-6) auto;
   line-height: 1.7;
@@ -309,16 +310,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ---------------------------------
-   SEÇÃO "O QUE VOCÊ VAI DESCOBRIR" (Fundo Branco com toques de cor)
+   SEÇÃO "O QUE VOCÊ VAI DESCOBRIR"
    --------------------------------- */
 .discover-section {
-  background-color: var(--color-white);
-  color: var(--color-primary);
+  background-color: var(--color-dark-deep);
+  color: var(--color-text-light);
 }
 
 .discover-section h2 {
   font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--color-dark);
+  color: var(--color-white);
   margin-bottom: var(--space-16);
   text-align: center;
 }
@@ -335,8 +336,8 @@ h1, h2, h3, h4, h5, h6 {
 .discover-card {
   padding: var(--space-8);
   border-radius: var(--radius-lg);
-  background: var(--color-off-white);
-  border: 1px solid rgba(173, 235, 179, 0.15); /* Borda verde suave */
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(173, 235, 179, 0.2); /* Borda verde suave */
   transition: var(--transition-smooth);
   display: flex;
   align-items: flex-start;
@@ -346,8 +347,8 @@ h1, h2, h3, h4, h5, h6 {
 .discover-card:hover {
   transform: translateY(-5px);
   border-color: var(--color-verde);
-  background: var(--color-white);
-  box-shadow: 0 15px 40px rgba(173, 235, 179, 0.08); /* Sombra sutil esverdeada */
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
 }
 
 .discover-icon-wrapper {
@@ -357,7 +358,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: var(--color-verde-suave);
+  background: rgba(173, 235, 179, 0.12);
   color: var(--color-verde);
   flex-shrink: 0;
   transition: var(--transition-smooth);
@@ -365,7 +366,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .discover-card:hover .discover-icon-wrapper {
   background: var(--color-verde);
-  color: var(--color-white);
+  color: var(--color-dark);
 }
 
 .discover-content {
@@ -377,13 +378,13 @@ h1, h2, h3, h4, h5, h6 {
 .discover-card-title {
   font-size: 1.15rem;
   font-weight: 600;
-  color: var(--color-dark);
+  color: var(--color-white);
   font-family: var(--font-body);
 }
 
 .discover-card-desc {
   font-size: 0.95rem;
-  color: var(--color-primary);
+  color: var(--color-text-muted);
   line-height: 1.5;
 }
 
@@ -735,4 +736,3 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
   }
 }
-
