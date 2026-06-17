@@ -314,9 +314,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .authority-section .accent-text {
-  color: var(--color-verde);
+  display: block;
+  margin: var(--space-8) auto 0 auto;
+  max-width: 700px;
+  padding: var(--space-5) var(--space-8);
+  border-left: 3px solid var(--color-verde);
+  background-color: var(--color-verde-suave);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  color: var(--color-dark);
   font-weight: 600;
-  margin-top: var(--space-8);
+  font-size: 1.1rem;
+  text-align: left;
+  line-height: 1.6;
 }
 
 /* ---------------------------------
