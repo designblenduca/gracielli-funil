@@ -44,8 +44,8 @@ function LeadCapture({ onComplete }) {
     <div className="quiz-container">
       <div className="quiz-card" style={{ maxWidth: '600px' }}>
         <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-          <h2 style={{ fontSize: '2rem', marginBottom: '16px', fontFamily: 'var(--font-heading)' }}>Seu resultado já está pronto.</h2>
-          <p style={{ color: 'var(--color-text-muted)' }}>Preencha seus dados para receber sua análise completa e orientação prática de desenvolvimento.</p>
+          <h2 style={{ fontSize: '2rem', marginBottom: '16px', fontFamily: 'var(--font-heading)', color: 'var(--color-dark)' }}>Seu resultado já está pronto.</h2>
+          <p style={{ color: 'var(--color-primary)' }}>Preencha seus dados para receber sua análise completa e orientação prática de desenvolvimento.</p>
         </div>
 
         <form onSubmit={handleSubmit}>
