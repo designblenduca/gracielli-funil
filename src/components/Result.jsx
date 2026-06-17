@@ -61,17 +61,48 @@ function Result({ profileCode }) {
         </div>
       </div>
 
-      <div className="result-actions">
-        <button 
-          id="btn-whatsapp-gracielli"
-          className="btn-primary" 
-          onClick={() => window.open('https://wa.me/seunumerodeexemplo', '_blank')}
-        >
-          ENVIAR MENSAGEM PARA GRACIELLI NO WHATSAPP
-        </button>
-        <button id="btn-comunidade-lider" className="btn-secondary">
-          CONHECER A COMUNIDADE LÍDER NA PRÁTICA
-        </button>
+      <div className="result-cta-blocks">
+        <div className="result-cta-card">
+          <h3 className="result-cta-title">Continue desenvolvendo sua liderança</h3>
+          <p className="result-cta-text">
+            A Comunidade Líder na Prática foi criada para líderes que desejam transformar conhecimento em ação no dia a dia.
+          </p>
+          <p className="result-cta-text">
+            Você terá acesso a conteúdos práticos, atuais e aplicáveis sobre liderança, além de encontros online periódicos para aprofundar temas relevantes, trocar experiências e evoluir continuamente como líder.
+          </p>
+          <button
+            id="btn-comunidade-lider"
+            className="btn-primary"
+          >
+            ENTRAR NA COMUNIDADE LÍDER NA PRÁTICA
+          </button>
+        </div>
+
+        <div className="result-cta-card">
+          <h3 className="result-cta-title">Quer acelerar ainda mais o seu desenvolvimento?</h3>
+          <p className="result-cta-text">
+            Seu resultado mostra tendências importantes sobre seu perfil de liderança, mas um diagnóstico mais aprofundado pode ajudar você a alinhar suas competências com os desafios e objetivos da sua empresa.
+          </p>
+          <p className="result-cta-text">
+            Descubra quais são os próximos passos para potencializar sua liderança.
+          </p>
+          <div className="result-cta-actions">
+            <button
+              id="btn-saber-mais"
+              className="btn-primary"
+              onClick={() => window.open('https://designblenduca.github.io/gracielli-mentoria/', '_blank')}
+            >
+              SABER MAIS
+            </button>
+            <button
+              id="btn-contato-gracielli"
+              className="btn-secondary"
+              onClick={() => window.open('https://wa.me/seunumerodeexemplo', '_blank')}
+            >
+              ENTRAR EM CONTATO COM A GRACIÉLLI
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

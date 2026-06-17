@@ -5,15 +5,17 @@ function Footer() {
         <div className="footer-grid">
           <div className="footer-info">
             <h3 className="footer-logo">Graciélli Camini</h3>
-            <p className="footer-tagline">
-              Desenvolvimento de liderança, mentoria executiva e psicologia organizacional.
-            </p>
+            <div className="footer-badges">
+              <span className="footer-badge">Psicóloga Organizacional</span>
+              <span className="footer-badge">Mentora Executiva</span>
+              <span className="footer-badge">Desenvolvimento de Líderes</span>
+            </div>
           </div>
-          
+
           <div className="footer-cta-card">
             <h4>Quer mapear a liderança da sua empresa?</h4>
             <p>
-              Leve esta metodologia diagnóstica para o seu time de gestores e diretores. Identifique gargalos e desenvolva inteligência executiva em escala.
+              Leve esta metodologia para diagnosticar o seu time de gestores e diretores. Identifique gargalos e desenvolva inteligência executiva em escala.
             </p>
             <button 
               id="btn-footer-cta" 
