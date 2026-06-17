@@ -33,10 +33,10 @@ function Result({ profileCode }) {
   const data = resultData[profileCode] || resultData['B'];
 
   return (
-    <div className="section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+    <div className="section result-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
       <div className="result-header">
         <p>SEU PERFIL PREDOMINANTE É:</p>
-        <h1 style={{ color: 'var(--color-accent)' }}>{data.perfil}</h1>
+        <h1>{data.perfil}</h1>
       </div>
 
       <div className="result-grid">
