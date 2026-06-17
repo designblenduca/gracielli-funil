@@ -74,19 +74,19 @@ const quizData = [
   }
 ];
 
-function Quiz({ onComplete }) {
+function Quiz({ onComplete, onExit }) {
   const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
   const [scores, setScores] = useState({ A: 0, B: 0, C: 0, D: 0 });
+  const [answers, setAnswers] = useState([]);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const handleOptionSelect = (value) => {
     if (isTransitioning) return;
-    
     setIsTransitioning(true);
-    
     const newScores = { ...scores, [value]: scores[value] + 1 };
+    const newAnswers = [...answers, value];
     setScores(newScores);
-
+    setAnswers(newAnswers);
     setTimeout(() => {
       if (currentQuestionIdx < quizData.length - 1) {
         setCurrentQuestionIdx(currentQuestionIdx + 1);
@@ -94,7 +94,15 @@ function Quiz({ onComplete }) {
       } else {
         onComplete(newScores);
       }
-    }, 600); // tempo da microanimação
+    }, 600);
+  };
+
+  const handleBack = () => {
+    if (currentQuestionIdx === 0) return;
+    const prevAnswer = answers[answers.length - 1];
+    setScores({ ...scores, [prevAnswer]: scores[prevAnswer] - 1 });
+    setAnswers(answers.slice(0, -1));
+    setCurrentQuestionIdx(currentQuestionIdx - 1);
   };
 
   const currentQ = quizData[currentQuestionIdx];
@@ -103,10 +111,23 @@ function Quiz({ onComplete }) {
   return (
     <div className="quiz-container">
       <div className="quiz-card">
+        <div className="quiz-nav">
+          <button
+            className="quiz-nav-btn"
+            onClick={handleBack}
+            disabled={currentQuestionIdx === 0}
+          >
+            ← Voltar
+          </button>
+          <button className="quiz-nav-btn quiz-nav-exit" onClick={onExit}>
+            Sair
+          </button>
+        </div>
+
         <div className="quiz-header">
           <div className="quiz-progress-bar">
-            <div 
-              className="quiz-progress-fill" 
+            <div
+              className="quiz-progress-fill"
               style={{ width: `${progressPercent}%` }}
             ></div>
           </div>
@@ -117,11 +138,10 @@ function Quiz({ onComplete }) {
 
         <div className={`quiz-body ${isTransitioning ? 'fade-out' : 'fade-in'}`} style={{ transition: 'opacity 0.3s', opacity: isTransitioning ? 0 : 1 }}>
           <h2 className="quiz-question">{currentQ.question}</h2>
-          
           <div className="quiz-options">
             {currentQ.options.map((opt, idx) => (
-              <button 
-                key={idx} 
+              <button
+                key={idx}
                 id={`quiz-option-${currentQuestionIdx}-${idx}`}
                 className="quiz-option"
                 onClick={() => handleOptionSelect(opt.value)}

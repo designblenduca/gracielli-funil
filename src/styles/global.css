@@ -444,6 +444,39 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.quiz-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-8);
+}
+
+.quiz-nav-btn {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  cursor: pointer;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+}
+
+.quiz-nav-btn:hover:not(:disabled) {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.quiz-nav-btn:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.quiz-nav-exit {
+  color: rgba(255, 255, 255, 0.4);
+}
+
 .quiz-header {
   margin-bottom: var(--space-10);
 }

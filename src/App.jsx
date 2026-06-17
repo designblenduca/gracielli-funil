@@ -53,7 +53,7 @@ function App() {
 
       {currentView === 'quiz' && (
         <div className="fade-in">
-          <Quiz onComplete={onQuizComplete} />
+          <Quiz onComplete={onQuizComplete} onExit={() => setCurrentView('landing')} />
         </div>
       )}
 
